@@ -114,7 +114,7 @@ export default {
             remoteValidate (data) {
                 if (!Array.isArray(data)) return '返回值需要是数组'
                 const errData = data.find((item) => (!item.hasOwnProperty('id') || !item.hasOwnProperty('name')))
-                if (errData) return '返回值每个元素需要含有Id和Name字段'
+                if (errData) return '返回值每个元素需要含有id和name字段'
             },
             val: [
                 { id: 1, name: '爬山' },

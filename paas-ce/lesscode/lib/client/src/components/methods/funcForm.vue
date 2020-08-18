@@ -20,7 +20,7 @@
                     :class="['func-temp', { select: form.funcType === temp.id }]"
                 >{{ temp.name }}</span>
             </bk-form-item>
-            <bk-form-item label="参数" :key="`${form.id}funcParams`" property="funcParams" :rules="[nameRule]" error-display-type="normal" desc="调用该函数参入的参数列表，输入后按回车添加参数">
+            <bk-form-item label="参数" :key="`${form.id}funcParams`" property="funcParams" :rules="[nameRule]" error-display-type="normal" desc="调用该函数传入的参数列表，如果函数用于组件事件，则这里是组件事件回调的参数，组件事件回调参数具体可见组件文档。输入后按回车添加参数">
                 <bk-tag-input v-model="form.funcParams"
                     placeholder="请输入参数名称，由大小写英文字母、下划线、数字组成"
                     :list="[]"
